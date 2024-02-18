@@ -1,0 +1,48 @@
+
+li{
+    list-style: none;
+}
+table{
+    border-bottom: 1px solid black;
+    margin-right: 20%;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+    height: 500px;
+
+    
+}
+thead th{
+    border: 1px solid gray;
+
+    
+}
+tbody td{
+    background-color: aliceblue;   
+}
+div{
+    height: 300px;
+	opacity:  0.8;
+	overflow: hidden;
+}
+#jeu {
+    background-color: azure;
+}
+#rouge{
+    background-color: red;
+}
+#bleu{
+    background-color: blue;
+}
+#noir{
+    background-color: black;
+}
+#whith{
+    background-color: white;
+}
+#orange{
+    background-color: orange;
+}
+#violet{
+    background-color: violet;
+}

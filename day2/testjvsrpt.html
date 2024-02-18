@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="utf-8">
+      <title> Ma page jvscrpt </title>
+      <script> // script 1 
+         let i;
+         for(i=0;i<10;i++)
+         {
+            console.log("bonjour ");
+            console.log(" ",i);
+         }
+      </script>
+
+      <script> // if else
+         /* ceci est un commentaire javascript
+            qui peut s'étendre sur plusieurs lignes */
+            
+         let b=7;
+         if(6<b)
+         {
+            console.log(b," est plus grand que 6");
+         }
+         else
+            console.log(b," est plus petit que 6");
+      </script>
+      <script type="text/javascript" src="mj.js" ></script>
+      <script> // les fonctions
+
+         function maFonction1 (a)
+         {
+            console.log("ceci est une fonction qui dit bonjour suivi de ",a);
+         }
+         function maFonction2(b)
+         {
+            let i=0;
+            while(i<=b)
+            {
+               maFonction1(i);
+               i++;
+            }
+         }
+         maFonction2(5);
+      </script>
+      <script> // Quelques type
+            let chaine="ceci est une chaine de caractère";
+            let tableau=[1,4,"case2 du tableau",7];
+            console.log(tableau[2]);
+            let a=tableau[1]*(6-7/2+2);
+            // nombre :en javascript les nombres sont des doubles (IEEE_754 sur 64 bits)
+            console.log(a);
+            let boolee=true;
+            let boolee1=(boolee && ! boolee) || boolee;
+            console.log(boolee1);
+            let maMap={"cle1":5,"cle2":6,7:[5,2]};
+            for(maVar in maMap)
+            {
+               console.log("clé :", maVar);
+               console.log("val :", maMap[maVar]);
+               console.log();
+            }
+            for(maVar in tableau)
+            {
+               console.log("clé :", maVar);
+               console.log("val :", tableau[maVar]);
+               console.log();
+            }
+            // Object : 
+      </script>
+      <script>
+         let nbb1=0;
+         function evBouton1()
+         {
+            nbb1+=1;
+            console.log("bouton1 cliqué ",nbb1," fois");
+         }
+         function evBouton2()
+         {
+           alert("Vous avez cliqué sur le bouton 2 !");  
+         }
+         let nbb3=0;
+         function evBouton3()
+         {
+           nbb3+=1;
+           document.getElementById("pb4").innerHTML="집에 가고 싶다고 "+nbb3+" 번 말는 중(속으로)(소근소근)"
+
+           // la méthode getElementBy doit être appelé après la construction
+           // du paragraphe
+         }
+         function inp()
+         {
+           document.getElementById("pinp").innerHTML=document.getElementById("inpu").value;
+         }
+      </script>
+   </head>
+   <body>
+      <button type="button" onclick="evBouton1()"> Bouton 1</button>
+      <button type="button" onclick="evBouton2()"> Bouton 2</button>
+      <button type="button" onclick="evBouton3()"> 집</button>
+      <p> Ici : <input id="inpu" type="text" > <button type="button" onclick="inp()"> soumettre !</button></p>
+      <p> <input type=checkbox> <input type=date> </p>
+      <p id="pb4">Vous n'avez pas encore cliqué sur le bouton 3 </p>
+      <p id="pinp"> Vous n'avez encore rien écrit </p>
+      <p> 
+         Ce paragraphe est classique mais il contient une
+         <script>
+            document.write("<strong> ceci a été ajouté par du code javascript </strong>");
+            // document.write doit uniquement être appelé pendant la construction
+            // de la page
+         </script>
+         balise javascript.
+      </p>
+   </body>
+</html>

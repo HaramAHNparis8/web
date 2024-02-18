@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <script>
+        function duplication() {    
+            var copyText = document.getElementById('Inputs');
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("Copy");
+            alert('duplication réussit');
+          }
+        </script>
+    </head>
+    <body>
+            <input id = "Inputs">
+            <button onclick="duplication()">dupliquer</button>
+        
+    </body>
+
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "fr">
+	<head>
+		<script>
+			function pascal(a,b){
+				if(a == 0 || b == 0 || a == b){
+					return 1;
+				}
+				else{
+					return pascal(a - 1, b) + pascal(a - 1, b - 1)
+				}
+			}
+			function affichage(){
+				for(var i = 0; i < 5; i++){
+					for(var j = 0; j <= i; j++){
+						document.write("  "+"  "+pascal(i,j));
+					}
+					document.write("<br>")
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<form>
+			<button type="button" onclick="affichage()">afficher triangle pascal</button>
+			<button type ="button">effacer</button>
+		<form>
+	</body>
+
+</html>
